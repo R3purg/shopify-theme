@@ -1,1 +1,1 @@
-# shopify-theme
+# viskasvejai-theme

@@ -14,25 +14,25 @@
         "type": "color",
         "id": "color_primary",
         "label": "Primary",
-        "default": "#d63384"
+        "default": "#7A2331"
       },
       {
         "type": "color",
         "id": "color_secondary",
         "label": "Secondary",
-        "default": "#6C757D"
+        "default": "#241A16"
       },
       {
         "type": "color",
         "id": "color_body_bg",
         "label": "Body bg",
-        "default": "#ffffff"
+        "default": "#F7F2EC"
       },
       {
         "type": "color",
         "id": "color_body_color",
         "label": "Body color",
-        "default": "#212529"
+        "default": "#241A16"
       }
     ]
   },

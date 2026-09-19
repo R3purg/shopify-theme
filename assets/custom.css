@@ -1,3 +1,391 @@
-/* 
-  Add here your own custom css styles
-*/
+/* Jos Pyne design foundation */
+:root {
+  --jp-surface: #fbf8f4;
+  --jp-ink-muted: rgba(var(--bs-body-color-rgb), 0.72);
+  --jp-border: rgba(var(--bs-body-color-rgb), 0.12);
+  --jp-ease: 180ms ease;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.heading,
+.title {
+  font-weight: 600;
+  letter-spacing: 0;
+  line-height: 1.15;
+}
+
+p,
+.description,
+.rte {
+  line-height: 1.7;
+}
+
+a {
+  text-underline-offset: 0.16em;
+  transition: color var(--jp-ease), opacity var(--jp-ease);
+}
+
+.btn {
+  border-radius: 0.125rem;
+  min-height: 2.75rem;
+  padding: 0.75rem 1.5rem;
+  transition: background-color var(--jp-ease), border-color var(--jp-ease), color var(--jp-ease), transform var(--jp-ease);
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+}
+
+.btn:focus-visible,
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible,
+[tabindex]:focus-visible {
+  outline: 2px solid var(--bs-primary);
+  outline-offset: 3px;
+}
+
+.form-control,
+.form-select,
+.form-check-input {
+  border-color: var(--jp-border);
+  border-radius: 0.125rem;
+}
+
+.form-control:focus,
+.form-select:focus,
+.form-check-input:focus {
+  border-color: var(--bs-primary);
+  box-shadow: 0 0 0 0.2rem rgba(var(--bs-primary-rgb), 0.15);
+}
+
+.img-thumbnail,
+.card,
+.accordion-item,
+.modal-content,
+.offcanvas {
+  border-color: var(--jp-border);
+  border-radius: 0.25rem;
+}
+
+@media (max-width: 767.98px) {
+  .container {
+    padding-right: 1.25rem;
+    padding-left: 1.25rem;
+  }
+}
+
+/* Header: retain the theme's existing navigation architecture. */
+#header-group {
+  box-shadow: 0 1px 0 var(--jp-border);
+}
+
+.announcement-bar {
+  background-color: var(--bs-primary);
+  color: #f3e6e4;
+}
+
+.announcement-bar .description {
+  font-size: 0.8125rem;
+  letter-spacing: 0.03em;
+}
+
+#navbar-wrapper {
+  background-color: rgba(var(--bs-body-bg-rgb), 0.96);
+  border-color: var(--jp-border) !important;
+  backdrop-filter: blur(8px);
+}
+
+#navbar-wrapper .navbar-logo {
+  color: var(--bs-primary);
+  font-family: var(--bs-headings-font-family);
+  font-size: 1.625rem;
+  font-weight: 600;
+}
+
+#navbar-wrapper .nav-link {
+  font-size: 0.90625rem;
+  font-weight: 500;
+  color: var(--bs-body-color);
+}
+
+#navbar-wrapper .nav-desktop-menu .nav-link {
+  padding: 0.75rem 1rem;
+}
+
+#navbar-wrapper .nav-desktop-menu .nav-link.active,
+#navbar-wrapper .nav-desktop-menu .nav-link:hover,
+#navbar-wrapper .nav-desktop-menu .nav-link:focus-visible {
+  color: var(--bs-primary);
+}
+
+#navbar-wrapper .nav-link-icon {
+  min-width: 2.75rem;
+  min-height: 2.75rem;
+  align-items: center;
+  justify-content: center;
+}
+
+#navbar-wrapper .cart-count-badge {
+  background-color: var(--bs-primary);
+  color: #fff;
+  font-size: 0.625rem;
+}
+
+/* Footer: retain the native newsletter, menu blocks, and mobile accordions. */
+#footer-group .newsletter {
+  background-color: var(--jp-surface);
+  border-color: var(--jp-border) !important;
+}
+
+#footer {
+  background-color: var(--bs-secondary);
+  color: #f3e6e4;
+}
+
+#footer .title,
+#footer .heading {
+  color: #fff;
+  font-size: 1rem;
+}
+
+#footer .footer-block .title span {
+  padding: 0;
+  background: none;
+}
+
+#footer .nav-link,
+#footer .description,
+#footer .rte,
+#footer-copyright {
+  color: rgba(243, 230, 228, 0.78);
+}
+
+#footer .nav-link:hover,
+#footer .nav-link:focus-visible,
+#footer a:hover,
+#footer a:focus-visible {
+  color: #fff;
+}
+
+#footer hr {
+  border-color: rgba(243, 230, 228, 0.16);
+  opacity: 1;
+}
+
+#footer .social-icons,
+#footer .social-icons .btn,
+#footer .payment-icons .payment-icon {
+  border-radius: 0.125rem;
+}
+
+/* Editorial hero: existing slide blocks remain fully configurable in Shopify. */
+.hero-carousel-editorial {
+  position: relative;
+}
+
+.hero-carousel-editorial .carousel-item {
+  height: max(32.5rem, min(88svh, 51.25rem)) !important;
+  min-height: 0;
+}
+
+.hero-carousel-editorial .media-wrapper,
+.hero-carousel-editorial .media-wrapper > div,
+.hero-carousel-editorial .media-wrapper img {
+  height: max(32.5rem, min(88svh, 51.25rem)) !important;
+}
+
+.hero-carousel-editorial .media-wrapper::after {
+  background: linear-gradient(
+    0deg,
+    rgba(var(--overlay-color-rgb, 20, 12, 10), var(--overlay-opacity, 72%)) 0%,
+    rgba(var(--overlay-color-rgb, 20, 12, 10), 0.2) 58%,
+    rgba(var(--overlay-color-rgb, 20, 12, 10), 0.06) 100%
+  );
+}
+
+.hero-carousel-editorial .carousel-caption {
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 2;
+  align-items: flex-end;
+  justify-content: flex-start;
+  padding: 0 5vw 7.5rem;
+  text-align: left;
+  transform: none;
+}
+
+.hero-carousel-editorial .carousel-caption-inner {
+  margin: 0;
+}
+
+.hero-carousel-editorial .carousel-caption .subtitle {
+  margin-bottom: 1rem;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  opacity: 0.9;
+}
+
+.hero-carousel-editorial .carousel-caption .title {
+  max-width: 42rem;
+  margin-bottom: 1.25rem !important;
+  font-size: 4.25rem;
+  line-height: 1.05;
+}
+
+.hero-carousel-editorial .carousel-caption .description {
+  max-width: 30rem;
+  margin-bottom: 1.75rem;
+  font-size: 1.0625rem;
+  line-height: 1.6;
+}
+
+.hero-carousel-editorial .carousel-caption .btn-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin: 0;
+}
+
+.hero-carousel-editorial .carousel-caption .btn-wrapper .btn {
+  margin: 0;
+  padding: 0.875rem 1.75rem;
+}
+
+.hero-carousel-editorial .carousel-indicators {
+  right: 5vw;
+  bottom: 3.5rem;
+  left: auto;
+  width: auto;
+  margin: 0;
+  z-index: 3;
+}
+
+.hero-carousel-editorial .carousel-indicators [data-bs-target] {
+  width: 0.4375rem;
+  height: 0.4375rem;
+  margin: 0 0.25rem;
+  border-radius: 999px;
+  background-color: rgba(255, 255, 255, 0.5) !important;
+}
+
+.hero-carousel-editorial .carousel-indicators [data-bs-target].active {
+  width: 1.625rem;
+  background-color: #fff !important;
+}
+
+.hero-carousel-editorial .carousel-indicators [data-bs-target] span {
+  display: none;
+}
+
+/* Value propositions: block-based store assurances below the hero. */
+.value-propositions {
+  border-bottom: var(--value-propositions-border) solid var(--jp-border);
+}
+
+.value-propositions-surface {
+  background-color: var(--jp-surface);
+}
+
+.value-propositions-body {
+  background-color: var(--bs-body-bg);
+}
+
+.value-propositions-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1rem 2.5rem;
+  justify-items: center;
+  padding: 1.5rem 0;
+}
+
+.value-proposition {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: var(--bs-body-color);
+  font-size: 0.84375rem;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.value-proposition[href]:hover,
+.value-proposition[href]:focus-visible {
+  color: var(--bs-primary);
+}
+
+.value-proposition-icon {
+  flex: 0 0 auto;
+  color: var(--bs-primary);
+}
+
+.hero-carousel-editorial .carousel-zoom-in .carousel-item.active img,
+.hero-carousel-editorial .carousel-zoom-in .carousel-item.active svg {
+  animation: hero-carousel-ken-burns var(--hero-zoom-duration, 6s) ease-out both;
+}
+
+@keyframes hero-carousel-ken-burns {
+  from { transform: scale(1); }
+  to { transform: scale(1.09); }
+}
+
+@media (max-width: 767.98px) {
+  .value-propositions-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    justify-items: start;
+    gap: 1rem;
+    padding: 1.25rem 0;
+  }
+
+  .hero-carousel-editorial .carousel-item,
+  .hero-carousel-editorial .media-wrapper,
+  .hero-carousel-editorial .media-wrapper > div,
+  .hero-carousel-editorial .media-wrapper img {
+    height: 38.75rem !important;
+    min-height: 0;
+  }
+
+  .hero-carousel-editorial .carousel-caption {
+    padding: 0 1.25rem 5.5rem;
+  }
+
+  .hero-carousel-editorial .carousel-caption .title {
+    font-size: 2.625rem;
+  }
+
+  .hero-carousel-editorial .carousel-caption .description {
+    font-size: 0.9375rem;
+  }
+
+  .hero-carousel-editorial .carousel-indicators {
+    right: auto;
+    bottom: 1.75rem;
+    left: 1rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}

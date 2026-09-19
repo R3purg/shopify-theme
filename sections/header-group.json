@@ -25,7 +25,7 @@
       "settings": {
         "bg_color": "bg-primary",
         "bg_opacity": 100,
-        "bg_gradient": "bg-gradient",
+        "bg_gradient": "",
         "text_color": "text-white",
         "border_top_width": 0,
         "border_bottom_width": 0,
@@ -83,7 +83,7 @@
         "border_bottom_width": 0,
         "border_color": "border-body",
         "border_opacity": 100,
-        "shadow": "shadow-sm"
+        "shadow": ""
       }
     }
   },

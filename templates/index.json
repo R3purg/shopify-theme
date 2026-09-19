@@ -9,14 +9,14 @@
             "img_mobile": "shopify:\/\/shop_images\/lifestyle-1-mobile.jpg",
             "img_desktop": "shopify:\/\/shop_images\/lifestyle-1.jpg",
             "overlay_color": "#000000",
-            "overlay_opacity": 10,
-            "overlay_blur": 2,
-            "subtitle": "Developed by KondaSoft",
-            "title": "Welcome to KS BootShop Theme",
-            "description": "<p>Free Shopify Theme inspired by simplicity and elegance.<\/p>",
-            "btn_primary_text": "Shop all",
+            "overlay_opacity": 70,
+            "overlay_blur": 0,
+            "subtitle": "Autumn / Winter Collection",
+            "title": "Wrapped in handmade warmth",
+            "description": "<p>Chunky merino sweaters and cardigans, knit one stitch at a time by hand - no two exactly alike.<\/p>",
+            "btn_primary_text": "Shop New Arrivals",
             "btn_primary_url": "shopify:\/\/collections\/all",
-            "btn_secondary_text": "Latest arrivals",
+            "btn_secondary_text": "Explore Collection",
             "btn_secondary_url": "shopify:\/\/collections\/latest"
           }
         },
@@ -26,12 +26,12 @@
             "img_mobile": "shopify:\/\/shop_images\/lifestyle-2-mobile.jpg",
             "img_desktop": "shopify:\/\/shop_images\/lifestyle-2.jpg",
             "overlay_color": "#000000",
-            "overlay_opacity": 10,
-            "overlay_blur": 2,
-            "subtitle": "Developed by KondaSoft",
-            "title": "Simple to Use, Easy to Customize",
-            "description": "<p>Free Shopify Theme inspired by simplicity and elegance.<\/p>",
-            "btn_primary_text": "Primary button",
+            "overlay_opacity": 70,
+            "overlay_blur": 0,
+            "subtitle": "Made in Small Batches",
+            "title": "Slow fashion, tied by hand",
+            "description": "<p>Thoughtfully made knits for the seasons and years ahead.<\/p>",
+            "btn_primary_text": "Shop Knitwear",
             "btn_primary_url": "",
             "btn_secondary_text": "Secondary button",
             "btn_secondary_url": ""
@@ -51,26 +51,81 @@
         "border_bottom_width": 0,
         "border_color": "border-body",
         "border_opacity": 100,
-        "carousel_controls": true,
+        "carousel_controls": false,
         "carousel_indicators": true,
-        "carousel_transition": "slide",
-        "carousel_transition_duration": 500,
+        "carousel_transition": "slide carousel-fade",
+        "carousel_transition_duration": 750,
         "carousel_autoplay": 5,
         "carousel_effect": "carousel-zoom-in",
-        "media_mobile_height": 500,
-        "media_desktop_height": 700,
+        "zoom_duration": 6,
+        "media_mobile_height": 620,
+        "media_desktop_height": 820,
         "media_adapt": false,
         "media_full": true,
-        "caption_max_width": "900",
-        "caption_position": "carousel-caption-center",
+        "subtitle": "Autumn / Winter Collection",
+        "title": "Wrapped in handmade warmth",
+        "description": "<p>Chunky merino sweaters and cardigans, knit one stitch at a time by hand - no two exactly alike.<\/p>",
+        "btn_primary_text": "Shop New Arrivals",
+        "btn_primary_url": "shopify:\/\/collections\/all",
+        "btn_secondary_text": "Explore Collection",
+        "btn_secondary_url": "shopify:\/\/collections\/latest",
+        "caption_max_width": "620",
+        "caption_position": "carousel-caption-bottom",
         "subtitle_font_size": "fs-md",
-        "title_font_size": "h2",
+        "title_font_size": "h1",
         "description_font_size": "fs-lg",
         "btn_primary_color": "btn-primary",
-        "btn_secondary_color": "btn-secondary",
+        "btn_secondary_color": "btn-outline-white",
         "btn_font_size": "fs-md",
         "pt": 0,
         "pb": 0
+      }
+    },
+    "value_propositions_jos_pyne": {
+      "type": "value-propositions",
+      "blocks": {
+        "shipping": {
+          "type": "proposition",
+          "settings": {
+            "icon": "truck",
+            "text": "Free shipping over $150",
+            "link": ""
+          }
+        },
+        "returns": {
+          "type": "proposition",
+          "settings": {
+            "icon": "recently-viewed",
+            "text": "Easy 30-day returns",
+            "link": ""
+          }
+        },
+        "wool": {
+          "type": "proposition",
+          "settings": {
+            "icon": "heart",
+            "text": "Premium merino wool",
+            "link": ""
+          }
+        },
+        "craft": {
+          "type": "proposition",
+          "settings": {
+            "icon": "check-circle",
+            "text": "Hand-knit in small batches",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "shipping",
+        "returns",
+        "wool",
+        "craft"
+      ],
+      "settings": {
+        "background": "value-propositions-surface",
+        "show_border": true
       }
     },
     "featured_products_nXJKQn": {
@@ -683,6 +738,7 @@
   },
   "order": [
     "hero_carousel_CmDneU",
+    "value_propositions_jos_pyne",
     "featured_products_nXJKQn",
     "richtext_4miPYL",
     "richtext_AtYwxr",

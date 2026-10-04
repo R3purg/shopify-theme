@@ -1,0 +1,117 @@
+<section
+  id="shop-the-look-{{ section.id }}"
+  class="shop-the-look"
+  style="--shop-the-look-columns: {{ section.settings.columns_desktop }};"
+>
+  <div class="container" style="max-width: {{ section.settings.container_max_width | append: 'px' }};">
+    <div class="shop-the-look-grid">
+      {% for block in section.blocks %}
+        {% liquid
+          assign destination = block.settings.instagram_url
+          assign destination_label = 'View on Instagram'
+
+          if block.settings.product != blank
+            assign destination = block.settings.product.url
+            assign destination_label = 'Shop ' | append: block.settings.product.title
+          endif
+        %}
+        <article class="shop-the-look-item" {{ block.shopify_attributes }}>
+          {% if destination != blank %}
+            <a
+              class="shop-the-look-link"
+              href="{{ destination }}"
+              {% if block.settings.product == blank %}
+                target="_blank" rel="noopener"
+              {% endif %}
+              aria-label="{{ destination_label | escape }}"
+            >
+          {% endif %}
+          <div class="shop-the-look-media">
+            {% if block.settings.image != blank %}
+              {% render 'image-url',
+                img: block.settings.image,
+                size: 900,
+                orientation: section.settings.image_ratio,
+                class: 'shop-the-look-image',
+                loading: 'lazy',
+                scale: true
+              %}
+            {% else %}
+              {{ 'image' | placeholder_svg_tag: 'shop-the-look-image placeholder-svg' }}
+            {% endif %}
+          </div>
+          {% if destination != blank %}
+            </a>
+          {% endif %}
+        </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Shop the look",
+  "tag": "section",
+  "max_blocks": 8,
+  "settings": [
+    {
+      "type": "text",
+      "id": "container_max_width",
+      "label": "Container max-width (px)",
+      "info": "Leave empty to use the global container width"
+    },
+    {
+      "type": "select",
+      "id": "columns_desktop",
+      "label": "Columns on desktop",
+      "default": "4",
+      "options": [
+        { "value": "3", "label": "3" },
+        { "value": "4", "label": "4" }
+      ]
+    },
+    {
+      "type": "select",
+      "id": "image_ratio",
+      "label": "Image ratio",
+      "default": "ratio-3x4",
+      "options": [
+        { "value": "ratio-1x1", "label": "Square" },
+        { "value": "ratio-4x3", "label": "Landscape" },
+        { "value": "ratio-3x4", "label": "Portrait" }
+      ]
+    }
+  ],
+  "blocks": [
+    {
+      "type": "look",
+      "name": "Look",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "product",
+          "id": "product",
+          "label": "Product to feature"
+        },
+        {
+          "type": "url",
+          "id": "instagram_url",
+          "label": "Instagram post URL",
+          "info": "Used when no product is selected"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Shop the look",
+      "blocks": [{ "type": "look" }, { "type": "look" }, { "type": "look" }, { "type": "look" }]
+    }
+  ]
+}
+{% endschema %}

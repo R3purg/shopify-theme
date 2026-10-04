@@ -1,0 +1,25 @@
+nohup: ignoring input
+╭─ success ────────────────────────────────────────────────────────────────────╮
+│                                                                              │
+│  Preview your theme                                                          │
+│    • http://127.0.0.1:9292 [1]                                               │
+│                                                                              │
+│  Next steps                                                                  │
+│    • Customize your theme at the theme editor [2]                            │
+│    • Share your theme preview [3] (https://quickstart-d52ccdb6.myshopify.co  │
+│      m/?preview_theme_id=164350066927)                                       │
+│                                                                              │
+╰──────────────────────────────────────────────────────────────────────────────╯
+[1] http://127.0.0.1:9292
+[2] https://quickstart-d52ccdb6.myshopify.com/admin/themes/164350066927/editor
+[3] https://quickstart-d52ccdb6.myshopify.com/?preview_theme_id=164350066927
+
+* Syncing theme #164350066927 on quickstart-d52ccdb6.myshopify.com
+package.json: package.json is not a theme file
+Error: kill ENOSYS
+    at process.kill (node:internal/process/per_thread:277:13)
+    at Interceptor.exit (file:///C:/Users/marci/AppData/Roaming/npm/node_modules/@shopify/cli/dist/chunk-WWX3LICJ.js:11282:18)
+    at process.<anonymous> (file:///C:/Users/marci/AppData/Roaming/npm/node_modules/@shopify/cli/dist/chunk-WWX3LICJ.js:11291:42)
+    at Object.onceWrapper (node:events:623:26)
+    at process.emit (node:events:520:35)
+    at process.emit (node:domain:489:12)

@@ -11,16 +11,24 @@
         "border_bottom_width": 0,
         "border_color": "border-body",
         "border_opacity": 100,
-        "container_max_width": "",
-        "header_title": "Contact form",
+        "container_max_width": "1200",
+        "layout": "studio",
+        "header_title": "We'd love to hear from you",
         "header_title_font_size": "h1",
-        "header_description": "<p>Add on optional description for this section<\/p>",
-        "header_description_font_size": "",
-        "img": "shopify:\/\/shop_images\/product-1_d69f3fea-71ab-46c3-a095-43b62ba2a441.jpg",
+        "header_description": "<p>Questions about sizing, an order, or a custom colorway request — our small team reads every message.<\/p>",
+        "header_description_font_size": "fs-md",
+        "header_eyebrow": "Get in touch",
+        "contact_email": "hello@jospyne.com",
+        "contact_hours": "Monday-Friday, 9am-5pm EET",
+        "contact_response_time": "We reply within 1 business day",
+        "show_order_number": true,
+        "show_topic": true,
+        "show_phone": false,
+        "img": "shopify:\/\/shop_images\/727158746_17955388005169020_1396144830082922304_n.jpg",
         "img_orientation": "ratio-3x4",
-        "img_border": "img-thumbnail",
-        "pt": 10,
-        "pb": 10
+        "img_border": "",
+        "pt": 12,
+        "pb": 12
       }
     },
     "5d7e9d3e-ba1d-498d-a3fd-144ce2e406e5": {
@@ -37,7 +45,7 @@
       }
     },
     "9b5ef318-8d23-40cd-a163-d1f62c2d0834": {
-      "type": "richtext",
+      "type": "faq",
       "settings": {
         "bg_color": "bg-body",
         "bg_opacity": 100,
@@ -47,21 +55,46 @@
         "border_bottom_width": 0,
         "border_color": "border-body",
         "border_opacity": 100,
-        "container_max_width": "900",
-        "text_align": "text-center",
-        "title": "Looking for FAQs?",
-        "title_font_size": "h3",
-        "description": "<p>View answers to some of the most common questions.<\/p>",
-        "description_font_size": "",
-        "btn_primary_text": "Read FAQs",
-        "btn_primary_url": "shopify:\/\/pages\/faqs",
-        "btn_primary_color": "btn-outline-primary",
-        "btn_secondary_text": "",
-        "btn_secondary_url": "",
-        "btn_secondary_color": "btn-secondary",
-        "pt": 8,
+        "container_max_width": "1200",
+        "open_first_item": true,
+        "header_title": "Frequently asked questions",
+        "header_title_font_size": "h2",
+        "header_description": "",
+        "header_description_font_size": "fs-md",
+        "pt": 4,
         "pb": 12
-      }
+      },
+      "blocks": {
+        "shipping": {
+          "type": "item",
+          "settings": {
+            "title": "How long does shipping take?",
+            "description": "<p>Every piece is hand-finished to order, so please allow 2-4 business days before it ships. Standard delivery then takes 5-8 business days domestically.<\/p>"
+          }
+        },
+        "returns": {
+          "type": "item",
+          "settings": {
+            "title": "Can I return or exchange my order?",
+            "description": "<p>Unused pieces may be returned or exchanged within 14 days of delivery. Contact us first so we can help with the next step.<\/p>"
+          }
+        },
+        "colorways": {
+          "type": "item",
+          "settings": {
+            "title": "Do you offer custom colorways?",
+            "description": "<p>Yes. Tell us the piece and colors you have in mind, and we will let you know what is possible for the next small batch.<\/p>"
+          }
+        },
+        "care": {
+          "type": "item",
+          "settings": {
+            "title": "How do I care for a hand-knit piece?",
+            "description": "<p>Store your piece folded, hand-wash it gently in cool water when needed, and lay it flat to dry.<\/p>"
+          }
+        }
+      },
+      "block_order": ["shipping", "returns", "colorways", "care"]
     }
   },
   "order": [

@@ -1,31 +1,78 @@
 <section
-  id="contact-form-section-{{ section.id }}" 
+  id="contact-form-section-{{ section.id }}"
   class="
-    contact-form-section 
-    {{ section.settings.bg_color }} 
+    contact-form-section
+    contact-form-section--{{ section.settings.layout }}
+    {{ section.settings.bg_color }}
     {{ section.settings.bg_gradient }}
     {{ section.settings.text_color }}
     {{ section.settings.border_top_width | prepend: 'border-top-' }}
     {{ section.settings.border_bottom_width | prepend: 'border-bottom-' }}
-    {{ section.settings.border_color }} 
-    {{ section.settings.pt | prepend: 'pt-' }} 
+    {{ section.settings.border_color }}
+    {{ section.settings.pt | prepend: 'pt-' }}
     {{ section.settings.pb | prepend: 'pb-' }}
   "
   style="
     --bs-bg-opacity: {{ section.settings.bg_opacity | append: '%' }};
     --bs-border-opacity: {{ section.settings.border_opacity | append: '%' }};
-  ">
-  <div 
-    class="container" 
-    style="max-width: {{ section.settings.container_max_width }}px">
-    <div class="row align-items-center">
-      {% if section.settings.img != nil %}
-        <div class="col-desktop-7 mb-6 mb-desktop-0">
-          {% render 'image-url', img: section.settings.img, size: 900, orientation: section.settings.img_orientation, class: section.settings.img_border %}
+  "
+>
+  <div
+    class="container"
+    style="max-width: {{ section.settings.container_max_width }}px"
+  >
+    <div class="row {% if section.settings.layout == 'studio' %}align-items-start{% else %}align-items-center{% endif %}">
+      {% if section.settings.img != null %}
+        <div class="{% if section.settings.layout == 'studio' %}col-desktop-8{% else %}col-desktop-7{% endif %} mb-6 mb-desktop-0">
+          {% render 'image-url',
+            img: section.settings.img,
+            size: 900,
+            orientation: section.settings.img_orientation,
+            class: section.settings.img_border
+          %}
+          {% if section.settings.layout == 'studio' %}
+            <div class="contact-form-section__intro">
+              {% if section.settings.header_eyebrow != blank %}
+                <p class="contact-form-section__eyebrow">{{ section.settings.header_eyebrow | escape }}</p>
+              {% endif %}
+              {% render 'section-header', class: 'text-start' %}
+              {% if section.settings.contact_email != blank
+                or section.settings.contact_hours != blank
+                or section.settings.contact_response_time != blank
+              %}
+                <dl class="contact-form-section__details">
+                  {% if section.settings.contact_email != blank %}
+                    <div>
+                      <dt>Email</dt>
+                      <dd>
+                        <a href="mailto:{{ section.settings.contact_email | escape }}">
+                          {{- section.settings.contact_email | escape -}}
+                        </a>
+                      </dd>
+                    </div>
+                  {% endif %}
+                  {% if section.settings.contact_hours != blank %}
+                    <div>
+                      <dt>Support hours</dt>
+                      <dd>{{ section.settings.contact_hours | escape }}</dd>
+                    </div>
+                  {% endif %}
+                  {% if section.settings.contact_response_time != blank %}
+                    <div>
+                      <dt>Response time</dt>
+                      <dd>{{ section.settings.contact_response_time | escape }}</dd>
+                    </div>
+                  {% endif %}
+                </dl>
+              {% endif %}
+            </div>
+          {% endif %}
         </div>
       {% endif %}
-      <div class="{% if section.settings.img == nil %}col-desktop-18{% else %}col-desktop-11{% endif %}">
-        {% render 'section-header' %}
+      <div class="{% if section.settings.img == nil %}col-desktop-18{% elsif section.settings.layout == 'studio' %}col-desktop-10{% else %}col-desktop-11{% endif %}">
+        {% unless section.settings.layout == 'studio' and section.settings.img != null %}
+          {% render 'section-header' %}
+        {% endunless %}
         {% form 'contact' %}
           {% if form.posted_successfully? %}
             <p class="form-success alert alert-success mb-5" role="alert">
@@ -33,67 +80,100 @@
             </p>
           {% endif %}
           {{ form.errors | default_errors }}
-          <div class="form-floating  mb-5">
-            <input 
-              id="contact-form-name"
-              class="form-control" 
-              type="text" 
-              name="contact[name]"
-              value="{% if form.name %}{{ form.name }}{% elsif customer %}{{ customer.name }}{% endif %}"  
-              placeholder="{{ 'general.contact_form.name' | t }}"
-              required>
-            <label for="contact-form-name">
-              {{ 'general.contact_form.name' | t }}
-            </label>
+          <div class="contact-form-section__name-email">
+            <div class="form-floating mb-5">
+              <input
+                id="contact-form-name"
+                class="form-control"
+                type="text"
+                name="contact[name]"
+                value="{% if form.name %}{{ form.name }}{% elsif customer %}{{ customer.name }}{% endif %}"
+                placeholder="{{ 'general.contact_form.name' | t }}"
+                required
+              >
+              <label for="contact-form-name">
+                {{ 'general.contact_form.name' | t }}
+              </label>
+            </div>
+            <div class="form-floating mb-5">
+              <input
+                id="contact-form-email"
+                class="form-control"
+                type="email"
+                name="contact[email]"
+                value="{% if form.email %}{{ form.email }}{% elsif customer %}{{ customer.email }}{% endif %}"
+                placeholder="{{ 'general.contact_form.email' | t }}"
+                spellcheck="false"
+                autocapitalize="off"
+                required
+              >
+              <label for="contact-form-email">
+                {{ 'general.contact_form.email' | t }}
+              </label>
+            </div>
           </div>
-          <div class="form-floating  mb-5">
-            <input 
-              id="contact-form-email"
-              class="form-control" 
-              type="email" 
-              name="contact[email]"
-              value="{% if form.email %}{{ form.email }}{% elsif customer %}{{ customer.email }}{% endif %}"  
-              placeholder="{{ 'general.contact_form.email' | t }}"
-              spellcheck="false"
-              autocapitalize="off"
-              required>
-            <label for="contact-form-email">
-              {{ 'general.contact_form.email' | t }}
-            </label>
-          </div>
-          <div class="form-floating  mb-5">
-            <input 
-              id="contact-form-phone"
-              class="form-control" 
-              type="tel" 
-              name="contact[phone]"
-              value="{{ customer.phone }}"  
-              placeholder="{{ 'general.contact_form.phone' | t }}"
-              pattern="[0-9\-]*"
-              autocomplete="tel">
-            <label for="contact-form-phone">
-              {{ 'general.contact_form.phone' | t }}
-            </label>
-          </div>
+          {% if section.settings.show_order_number %}
+            <div class="form-floating mb-5">
+              <input
+                id="contact-form-order-number"
+                class="form-control"
+                type="text"
+                name="contact[order_number]"
+                placeholder="Order number"
+              >
+              <label for="contact-form-order-number">Order number <span aria-hidden="true">(optional)</span></label>
+            </div>
+          {% endif %}
+          {% if section.settings.show_topic %}
+            <div class="form-floating mb-5">
+              <select id="contact-form-topic" class="form-select" name="contact[topic]" aria-label="Topic">
+                <option value="Order status">Order status</option>
+                <option value="Sizing help">Sizing help</option>
+                <option value="Returns and exchanges">Returns &amp; exchanges</option>
+                <option value="Custom colorway request">Custom colorway request</option>
+                <option value="Something else">Something else</option>
+              </select>
+              <label for="contact-form-topic">Topic</label>
+            </div>
+          {% endif %}
+          {% if section.settings.show_phone %}
+            <div class="form-floating  mb-5">
+              <input
+                id="contact-form-phone"
+                class="form-control"
+                type="tel"
+                name="contact[phone]"
+                value="{{ customer.phone }}"
+                placeholder="{{ 'general.contact_form.phone' | t }}"
+                pattern="[0-9\-]*"
+                autocomplete="tel"
+              >
+              <label for="contact-form-phone">
+                {{ 'general.contact_form.phone' | t }}
+              </label>
+            </div>
+          {% endif %}
           <div class="form-floating mb-5">
             <textarea
               id="contact-form-message"
               class="form-control"
               name="contact[message]"
-              value="{{ customer.phone }}"  
+              value="{{ customer.phone }}"
               placeholder="{{ 'general.contact_form.message' | t }}"
               required
-              style="height: 200px">
+              style="height: 200px"
+            >
               {{- form.body -}}
             </textarea>
             <label for="contact-form-message">
               {{ 'general.contact_form.message' | t }}
             </label>
           </div>
-          <button 
-              type="submit" 
-              class="btn btn-lg w-100 btn-primary">
-              {{ 'general.contact_form.send' | t }}
+          <button
+            type="submit"
+            class="btn btn-lg w-100 btn-primary"
+          >
+            {{ 'general.contact_form.send' | t }}
           </button>
         {% endform %}
       </div>
@@ -105,6 +185,16 @@
 {
   "name": "Contact form",
   "settings": [
+    {
+      "type": "select",
+      "id": "layout",
+      "label": "Layout",
+      "default": "standard",
+      "options": [
+        { "value": "standard", "label": "Standard" },
+        { "value": "studio", "label": "Studio contact" }
+      ]
+    },
     {
       "type": "header",
       "content": "Styling"
@@ -245,6 +335,48 @@
       ]
     },
     {
+      "type": "text",
+      "id": "header_eyebrow",
+      "label": "Eyebrow",
+      "info": "Shown above the header in Studio contact layout"
+    },
+    {
+      "type": "text",
+      "id": "contact_email",
+      "label": "Contact email",
+      "info": "Shown in Studio contact layout"
+    },
+    {
+      "type": "text",
+      "id": "contact_hours",
+      "label": "Support hours",
+      "info": "Shown in Studio contact layout"
+    },
+    {
+      "type": "text",
+      "id": "contact_response_time",
+      "label": "Response time",
+      "info": "Shown in Studio contact layout"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_order_number",
+      "label": "Show order number field",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "show_topic",
+      "label": "Show topic field",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "show_phone",
+      "label": "Show phone field",
+      "default": true
+    },
+    {
       "type": "header",
       "content": "Image"
     },
@@ -276,7 +408,7 @@
       "default": "img-thumbnail",
       "options": [
         { "value": "", "label": "None" },
-        { "value": "rounded",  "label": "Rounded" },
+        { "value": "rounded", "label": "Rounded" },
         { "value": "img-thumbnail", "label": "Thumbnail" }
       ]
     },

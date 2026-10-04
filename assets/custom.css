@@ -293,6 +293,240 @@ textarea:focus-visible,
   display: none;
 }
 
+/* Page heroes retain the same treatment at a more compact editorial scale. */
+.hero-carousel-editorial.hero-carousel-page .carousel-item,
+.hero-carousel-editorial.hero-carousel-page .media-wrapper,
+.hero-carousel-editorial.hero-carousel-page .media-wrapper > div,
+.hero-carousel-editorial.hero-carousel-page .media-wrapper img {
+  height: max(25rem, min(62svh, 35rem)) !important;
+}
+
+.hero-carousel-editorial.hero-carousel-page .carousel-caption {
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 1.25rem;
+  text-align: center;
+}
+
+.hero-carousel-editorial.hero-carousel-page .carousel-caption .title,
+.hero-carousel-editorial.hero-carousel-page .carousel-caption .description {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.hero-carousel-editorial.hero-carousel-page .carousel-caption .subtitle {
+  margin-bottom: 0.75rem;
+}
+
+/* Shop the look: editorial image grid with optional product links. */
+.shop-the-look {
+  padding: 0 0 5rem;
+}
+
+.shop-the-look-grid {
+  display: grid;
+  grid-template-columns: repeat(var(--shop-the-look-columns, 4), minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.shop-the-look-item,
+.shop-the-look-link,
+.shop-the-look-media {
+  min-width: 0;
+}
+
+.shop-the-look-item {
+  position: relative;
+}
+
+.shop-the-look-link {
+  position: relative;
+  display: block;
+  color: inherit;
+  text-decoration: none;
+}
+
+.shop-the-look-media {
+  overflow: hidden;
+  background-color: var(--jp-surface);
+}
+
+.shop-the-look-image {
+  width: 100%;
+  transition: transform 300ms ease;
+}
+
+.shop-the-look-link:hover .shop-the-look-image,
+.shop-the-look-link:focus-visible .shop-the-look-image {
+  transform: scale(1.035);
+}
+
+/* Collection: preserve native filtering and sorting in an editorial layout. */
+.collection-header {
+  display: flex;
+  align-items: center;
+  min-height: 20rem;
+  text-align: center;
+}
+
+.collection-header .container {
+  position: relative;
+  z-index: 1;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.collection-header .title {
+  max-width: 42rem;
+  margin: 0 auto 0.875rem;
+}
+
+.collection-header .description {
+  max-width: 38rem;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.collection-products .collection-utilities {
+  padding-bottom: 1.25rem;
+  border-bottom: 1px solid var(--jp-border);
+}
+
+.collection-products .collection-product-count {
+  color: var(--jp-ink-muted);
+  font-size: 0.8125rem;
+  font-weight: 500;
+}
+
+.collection-products .collection-utilities .btn {
+  min-height: 2.5rem;
+  padding-right: 1rem;
+  padding-left: 1rem;
+  font-size: 0.8125rem;
+}
+
+.collection-products .product-list > [role="list-item"] {
+  margin-bottom: 1.5rem !important;
+}
+
+.collection-products .product-card-img-wrapper {
+  margin-bottom: 0.875rem !important;
+  overflow: hidden;
+  background-color: var(--jp-surface);
+}
+
+.collection-products .product-card-title {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.collection-products .product-card-link:hover .product-card-title,
+.collection-products .product-card-link:focus-visible .product-card-title {
+  color: var(--bs-primary);
+}
+
+/* Contact: native Shopify form configured as a studio correspondence page. */
+.contact-form-section img {
+  width: 100%;
+}
+
+.contact-form-section--studio .row {
+  gap: 0;
+  align-items: flex-start;
+}
+
+.contact-form-section--studio .contact-form-section__intro {
+  margin-top: 2.25rem;
+}
+
+.contact-form-section--studio .section-header {
+  margin-bottom: 1.75rem;
+  text-align: left !important;
+}
+
+.contact-form-section--studio .section-header .title {
+  margin-bottom: 1rem;
+  text-align: left;
+}
+
+.contact-form-section--studio .section-header .description {
+  text-align: left;
+}
+
+.contact-form-section--studio .contact-form-section__eyebrow {
+  margin: 0 0 0.875rem;
+  color: var(--bs-primary);
+  font-size: 0.8125rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.contact-form-section--studio .contact-form-section__details {
+  display: grid;
+  gap: 1rem;
+  margin: 0;
+}
+
+.contact-form-section--studio .contact-form-section__details div {
+  display: grid;
+  gap: 0.125rem;
+}
+
+.contact-form-section--studio .contact-form-section__details dt {
+  color: var(--bs-primary);
+  font-size: 0.8125rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.contact-form-section--studio .contact-form-section__details dd {
+  margin: 0;
+}
+
+.contact-form-section--studio form {
+  padding: clamp(1.5rem, 3vw, 3rem);
+  border: 1px solid var(--jp-border);
+  border-radius: 0.375rem;
+  background-color: var(--jp-surface);
+}
+
+.contact-form-section--studio .contact-form-section__name-email {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.contact-form-section--studio .form-floating {
+  margin-bottom: 1rem !important;
+}
+
+.contact-form-section--studio .form-control,
+.contact-form-section--studio .form-select {
+  background-color: var(--bs-body-bg);
+}
+
+.contact-form-section--studio textarea.form-control {
+  min-height: 11rem;
+}
+
+.contact-form-section--studio .btn[type="submit"] {
+  margin-top: 0.5rem;
+}
+
+.faq .accordion-item {
+  border-right: 0;
+  border-left: 0;
+}
+
+@media (max-width: 767.98px) {
+  .contact-form-section--studio .contact-form-section__name-email {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+}
+
 /* Value propositions: block-based store assurances below the hero. */
 .value-propositions {
   border-bottom: var(--value-propositions-border) solid var(--jp-border);
@@ -345,6 +579,45 @@ textarea:focus-visible,
 }
 
 @media (max-width: 767.98px) {
+  .hero-carousel-editorial.hero-carousel-page .carousel-item,
+  .hero-carousel-editorial.hero-carousel-page .media-wrapper,
+  .hero-carousel-editorial.hero-carousel-page .media-wrapper > div,
+  .hero-carousel-editorial.hero-carousel-page .media-wrapper img {
+    height: 31.25rem !important;
+  }
+
+  .collection-header {
+    min-height: 16rem;
+  }
+
+  .collection-header .title {
+    margin-bottom: 0.625rem;
+  }
+
+  .collection-products .collection-utilities {
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+
+  .collection-products .collection-utilities .d-flex {
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 0.25rem;
+  }
+
+  .collection-products .collection-utilities .btn {
+    margin: 0 !important;
+  }
+
+  .shop-the-look {
+    padding-bottom: 3.5rem;
+  }
+
+  .shop-the-look-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.625rem;
+  }
+
   .value-propositions-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     justify-items: start;

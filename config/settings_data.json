@@ -8,8 +8,8 @@
     "border_radius": 0.2,
     "logo": "shopify:\/\/shop_images\/logo.png",
     "favicon": "shopify:\/\/shop_images\/favicon.png",
-    "font_body": "inter_n4",
-    "font_headings": "ubuntu_n4",
+    "font_body": "sans-serif",
+    "font_headings": "sans-serif",
     "btn_text_transform": "none",
     "btn_font_family": "var(--bs-body-font-family)",
     "btn_font_weight": "500",
@@ -87,13 +87,6 @@
     "product_card_wishlist_color": "text-primary",
     "product_card_img_carousel_dark": false,
     "cart_img_border": "img-thumbnail",
-    "content_for_index": [],
-    "blocks": {
-      "14060646107696862457": {
-        "type": "shopify:\/\/apps\/judge-me-reviews\/blocks\/judgeme_core\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
-        "disabled": false,
-        "settings": {}
-      }
-    }
+    "content_for_index": []
   }
 }

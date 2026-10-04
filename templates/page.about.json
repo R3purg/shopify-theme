@@ -6,13 +6,14 @@
         "slide_eGdG3z": {
           "type": "slide",
           "settings": {
-            "img_desktop": "shopify:\/\/shop_images\/lifestyle-1.jpg",
+            "img_mobile": "shopify:\/\/shop_images\/792705241_17965934238169020_4618502887653619332_n.jpg",
+            "img_desktop": "shopify:\/\/shop_images\/792705241_17965934238169020_4618502887653619332_n.jpg",
             "overlay_color": "#000000",
-            "overlay_opacity": 30,
-            "overlay_blur": 5,
-            "subtitle": "Optional Subtitle",
-            "title": "Welcome to our store",
-            "description": "<p>An optional description for this page<\/p>",
+            "overlay_opacity": 50,
+            "overlay_blur": 0,
+            "subtitle": "OUR STORY",
+            "title": "Slow fashion, tied by hand",
+            "description": "",
             "btn_primary_text": "",
             "btn_primary_url": "",
             "btn_secondary_text": "",
@@ -32,17 +33,25 @@
         "border_bottom_width": 0,
         "border_color": "border-body",
         "border_opacity": 100,
-        "carousel_controls": true,
-        "carousel_indicators": true,
-        "carousel_transition": "slide",
+        "carousel_controls": false,
+        "carousel_indicators": false,
+        "carousel_transition": "slide carousel-fade",
         "carousel_transition_duration": 500,
-        "carousel_autoplay": 5,
-        "carousel_effect": "carousel-zoom-in",
-        "media_mobile_height": 400,
-        "media_desktop_height": 500,
+        "carousel_autoplay": 0,
+        "carousel_effect": "",
+        "zoom_duration": 6,
+        "media_mobile_height": 500,
+        "media_desktop_height": 560,
         "media_adapt": false,
         "media_full": false,
-        "caption_max_width": "900",
+        "subtitle": "OUR STORY",
+        "title": "Slow fashion, tied by hand",
+        "description": "",
+        "btn_primary_text": "",
+        "btn_primary_url": "",
+        "btn_secondary_text": "",
+        "btn_secondary_url": "",
+        "caption_max_width": "850",
         "caption_position": "carousel-caption-center",
         "subtitle_font_size": "fs-md",
         "title_font_size": "h2",
@@ -54,21 +63,8 @@
         "pb": 0
       }
     },
-    "18e3bb8e-f1ba-421c-91c3-37c1c5b25a2a": {
-      "type": "separator",
-      "disabled": true,
-      "settings": {
-        "bg_color": "bg-body text-body",
-        "bg_opacity": 10,
-        "height": 1,
-        "container": "true",
-        "container_max_width": "",
-        "pt": 0,
-        "pb": 0
-      }
-    },
-    "91fa2e27-741f-431f-b658-c6ce03d0f6eb": {
-      "type": "page-content",
+    "c1a9b84d-66aa-4fa3-9a51-a7723c54b201": {
+      "type": "richtext",
       "settings": {
         "bg_color": "bg-body",
         "bg_opacity": 100,
@@ -78,99 +74,57 @@
         "border_bottom_width": 0,
         "border_color": "border-body",
         "border_opacity": 10,
-        "container_max_width": "800",
+        "container_max_width": "1000",
         "show_title": true,
-        "title_font_size": "h1",
+        "text_align": "text-center",
+        "title": "\"I started Jos Pyné with a single pair of needles and a mountain of merino roving — I wanted a sweater that felt like a hug. Six years later, that's still the only thing we make.\"",
+        "title_font_size": "h3",
+        "description": "<p>— Jos, Founder<\/p>",
         "description_font_size": "fs-md",
-        "pt": 9,
-        "pb": 9
+        "btn_primary_text": "",
+        "btn_primary_url": "",
+        "btn_primary_color": "btn-primary",
+        "btn_secondary_text": "",
+        "btn_secondary_url": "",
+        "btn_secondary_color": "btn-secondary",
+        "pt": 12,
+        "pb": 12
       }
     },
-    "54fb0ae0-8c55-432c-8b0a-1211e6ba4a0e": {
-      "type": "card-list",
+    "f2c94c6d-2c24-4828-9297-8ad76531a502": {
+      "type": "media-with-text",
       "blocks": {
-        "template--15889379819659__54fb0ae0-8c55-432c-8b0a-1211e6ba4a0e-item-1": {
-          "type": "item",
+        "slow_by_design": {
+          "type": "row",
           "settings": {
-            "img": "shopify:\/\/shop_images\/product-1_baca2f7d-a8b0-4db2-aa52-c4074f562b1d.jpg",
-            "title": "John Doe",
-            "description": "<p>CEO & Founder<\/p>",
-            "btn_text": "Learn more",
-            "btn_url": ""
+            "bg_color": "bg-body", "bg_opacity": 100, "bg_gradient": "", "text_color": "text-body", "border_top_width": 0, "border_bottom_width": 0, "border_color": "border-body", "border_opacity": 100,
+            "media_align_desktop": "", "media_border": "", "img": "shopify:\/\/shop_images\/766194224_17962253505169020_4798662981836574618_n.webp", "img_orientation": "ratio-3x4", "video_ratio": "adapt", "video_autoplay": true, "video_loop": true, "video_muted": true, "video_controls": false, "external_video": "",
+            "text_align_mobile": "text-center", "text_align_desktop": "text-desktop-start", "subtitle": "01 — SLOW BY DESIGN", "title": "One knitter, one garment, start to finish", "title_font_size": "h2", "description": "<p>Every cardigan takes roughly 14 hours of hand-knitting from cast-on to bind-off. We work in small batches, so quality never gets rushed to hit a deadline.<\/p>", "description_font_size": "fs-md", "btn_primary_text": "", "btn_primary_url": "", "btn_primary_color": "btn-primary", "btn_secondary_text": "", "btn_secondary_url": "", "btn_secondary_color": "btn-secondary", "pt": 8, "pb": 8
           }
         },
-        "template--15889379819659__54fb0ae0-8c55-432c-8b0a-1211e6ba4a0e-item-2": {
-          "type": "item",
+        "wool_story": {
+          "type": "row",
           "settings": {
-            "img": "shopify:\/\/shop_images\/product-5_4bfb97ab-4193-4461-a4e3-6e06d63b8249.jpg",
-            "title": "Jane Doe",
-            "description": "<p>Marketing<\/p>",
-            "btn_text": "Learn more",
-            "btn_url": ""
+            "bg_color": "bg-primary", "bg_opacity": 5, "bg_gradient": "", "text_color": "text-body", "border_top_width": 0, "border_bottom_width": 0, "border_color": "border-body", "border_opacity": 100,
+            "media_align_desktop": "flex-desktop-row-reverse", "media_border": "", "img": "shopify:\/\/shop_images\/727158746_17955388005169020_1396144830082922304_n.jpg", "img_orientation": "ratio-3x4", "video_ratio": "adapt", "video_autoplay": true, "video_loop": true, "video_muted": true, "video_controls": false, "external_video": "",
+            "text_align_mobile": "text-center", "text_align_desktop": "text-desktop-start", "subtitle": "02 — WOOL WITH A STORY", "title": "Thick merino, dyed in small kettles", "title_font_size": "h2", "description": "<p>We source undyed merino roving and hand-dye every batch in small kettles. Colors shift ever so slightly from run to run — we think that's a feature, not a flaw.<\/p>", "description_font_size": "fs-md", "btn_primary_text": "", "btn_primary_url": "", "btn_primary_color": "btn-primary", "btn_secondary_text": "", "btn_secondary_url": "", "btn_secondary_color": "btn-secondary", "pt": 8, "pb": 8
           }
         },
-        "template--15889379819659__54fb0ae0-8c55-432c-8b0a-1211e6ba4a0e-item-4": {
-          "type": "item",
+        "made_to_last": {
+          "type": "row",
           "settings": {
-            "img": "shopify:\/\/shop_images\/product-3.jpg",
-            "title": "Jim Doe",
-            "description": "<p>Sales<\/p>",
-            "btn_text": "Learn more",
-            "btn_url": ""
-          }
-        },
-        "template--15889379819659__54fb0ae0-8c55-432c-8b0a-1211e6ba4a0e-item-3": {
-          "type": "item",
-          "settings": {
-            "img": "shopify:\/\/shop_images\/product-2_51119e0e-dd95-4bc4-85bc-2db1278575ad.jpg",
-            "title": "Jill Doe",
-            "description": "<p>Developer<\/p>",
-            "btn_text": "Learn more",
-            "btn_url": ""
+            "bg_color": "bg-body", "bg_opacity": 100, "bg_gradient": "", "text_color": "text-body", "border_top_width": 0, "border_bottom_width": 0, "border_color": "border-body", "border_opacity": 100,
+            "media_align_desktop": "", "media_border": "", "img": "shopify:\/\/shop_images\/765854858_17962253514169020_7023738207487192987_n.webp", "img_orientation": "ratio-3x4", "video_ratio": "adapt", "video_autoplay": true, "video_loop": true, "video_muted": true, "video_controls": false, "external_video": "",
+            "text_align_mobile": "text-center", "text_align_desktop": "text-desktop-start", "subtitle": "03 — MADE TO LAST", "title": "A piece you'll still love in ten years", "title_font_size": "h2", "description": "<p>No trend colors, no fast-fashion shortcuts. Every piece is built to be re-worn, re-loved, and eventually handed down — with our care guide included in every order.<\/p>", "description_font_size": "fs-md", "btn_primary_text": "", "btn_primary_url": "", "btn_primary_color": "btn-primary", "btn_secondary_text": "", "btn_secondary_url": "", "btn_secondary_color": "btn-secondary", "pt": 8, "pb": 8
           }
         }
       },
       "block_order": [
-        "template--15889379819659__54fb0ae0-8c55-432c-8b0a-1211e6ba4a0e-item-1",
-        "template--15889379819659__54fb0ae0-8c55-432c-8b0a-1211e6ba4a0e-item-2",
-        "template--15889379819659__54fb0ae0-8c55-432c-8b0a-1211e6ba4a0e-item-4",
-        "template--15889379819659__54fb0ae0-8c55-432c-8b0a-1211e6ba4a0e-item-3"
+        "slow_by_design", "wool_story", "made_to_last"
       ],
-      "settings": {
-        "bg_color": "bg-gradient-body-light text-body",
-        "bg_opacity": 100,
-        "bg_gradient": "",
-        "text_color": "text-body",
-        "border_top_width": 0,
-        "border_bottom_width": 0,
-        "border_color": "border-body",
-        "border_opacity": 100,
-        "container_max_width": "",
-        "header_title": "Our Team",
-        "header_title_font_size": "h2",
-        "header_description": "<p>Add on optional description for this section<\/p>",
-        "header_description_font_size": "fs-md",
-        "item_bg_color": "bg-body",
-        "item_bg_opacity": 100,
-        "item_text_color": "text-body",
-        "item_border_width": 1,
-        "item_border_color": "border-body",
-        "item_border_opacity": 100,
-        "item_shadow": "shadow-sm",
-        "item_text_align": "text-center",
-        "item_img_orientation": "ratio-4x3",
-        "item_title_font_size": "h5",
-        "item_description_font_size": "fs-md",
-        "item_btn_color": "btn-primary",
-        "item_btn_size": "btn-sm",
-        "breakpoint_mobile": 1,
-        "breakpoint_tablet": 2,
-        "breakpoint_desktop": 4,
-        "pt": 6,
-        "pb": 11
-      }
+      "settings": { "container_max_width": "1200" }
     },
-    "664feedb-7180-4e8f-a84d-1cf45bc1dd42": {
+    "a3e4d671-0fb8-4de8-a495-2474ce5c3303": {
       "type": "richtext",
       "settings": {
         "bg_color": "bg-body",
@@ -183,40 +137,25 @@
         "border_opacity": 100,
         "container_max_width": "900",
         "text_align": "text-center",
-        "title": "Want to get in touch?!",
+        "title": "See the collection for yourself",
         "title_font_size": "h3",
-        "description": "<p>Please contact us anytime from Monday to Friday<\/p>",
-        "description_font_size": "",
-        "btn_primary_text": "Contact us",
-        "btn_primary_url": "shopify:\/\/pages\/contact-us",
-        "btn_primary_color": "btn-outline-primary",
+        "description": "",
+        "description_font_size": "fs-md",
+        "btn_primary_text": "Shop Knitwear",
+        "btn_primary_url": "shopify:\/\/collections\/all",
+        "btn_primary_color": "btn-primary",
         "btn_secondary_text": "",
         "btn_secondary_url": "",
         "btn_secondary_color": "btn-secondary",
         "pt": 6,
         "pb": 12
       }
-    },
-    "cfc6ff50-e3a5-4219-8350-f2db73f829c8": {
-      "type": "separator",
-      "disabled": true,
-      "settings": {
-        "bg_color": "bg-light text-body",
-        "bg_opacity": 10,
-        "height": 1,
-        "container": "container",
-        "container_max_width": "",
-        "pt": 0,
-        "pb": 0
-      }
     }
   },
   "order": [
     "hero_carousel_tdHVay",
-    "18e3bb8e-f1ba-421c-91c3-37c1c5b25a2a",
-    "91fa2e27-741f-431f-b658-c6ce03d0f6eb",
-    "54fb0ae0-8c55-432c-8b0a-1211e6ba4a0e",
-    "664feedb-7180-4e8f-a84d-1cf45bc1dd42",
-    "cfc6ff50-e3a5-4219-8350-f2db73f829c8"
+    "c1a9b84d-66aa-4fa3-9a51-a7723c54b201",
+    "f2c94c6d-2c24-4828-9297-8ad76531a502",
+    "a3e4d671-0fb8-4de8-a495-2474ce5c3303"
   ]
 }
